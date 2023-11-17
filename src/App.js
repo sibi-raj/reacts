@@ -1,10 +1,11 @@
-import App from "./day2/App";
+
+import ToggleState from "./component/day3/ToggleState";
 
 
 
-export default function app(){
+export default function App(){
   return(
-<App></App>
+<ToggleState></ToggleState>
 
   );
 }
