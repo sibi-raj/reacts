@@ -1,11 +1,12 @@
 
-import ToggleState from "./component/day3/ToggleState";
+import Message from "./component/day3/Message";
+
 
 
 
 export default function App(){
   return(
-<ToggleState></ToggleState>
+<Message></Message>
 
   );
 }
