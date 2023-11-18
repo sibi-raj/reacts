@@ -1,12 +1,11 @@
-
-import Message from "./component/day3/Message";
-
-
-
-
-export default function App(){
+import BasicForm from "./component/day2/BasicForm";
+function App()
+{
   return(
-<Message></Message>
-
+    <div>
+      <BasicForm></BasicForm>
+    </div>
   );
 }
+
+export default App;
