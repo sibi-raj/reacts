@@ -1,0 +1,84 @@
+
+.nav
+{
+    color: azure;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-right: 40px;
+    gap: 0.5rem;
+}
+.gapp
+{
+    gap:1rem;
+}
+/* Add this to your CSS file or style section */
+.susanimg {
+    height: 800px;
+    background-size: cover;
+}
+
+  /* Add this to your CSS file or style section */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .login-button button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .login-button button:hover {
+    background-color: #45a049;
+  }
+  
+  .navbar {
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .navbar li {
+    margin: 0 15px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .navbar a:hover {
+    color: #4CAF50;
+  }
+  
+
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+
+  
