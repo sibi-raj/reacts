@@ -1,6 +1,6 @@
 // RestaurantHomePage.jsx
 import {Link} from 'react-router-dom';
-import { Box, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import React from 'react';
 
 const HomePage = () => {
@@ -16,14 +16,24 @@ const HomePage = () => {
         </div>
       </header> 
       <nav className="navbar">
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+      
+          <Button variant='contained'> 
+          <Link to="/about" >ABOUT US</Link>
+        </Button>
+        &nbsp; &nbsp; &nbsp; &nbsp; 
+          <Button variant='contained'> 
+          Contacts
+        </Button>
+        &nbsp; &nbsp; &nbsp; &nbsp; 
+          <Button variant='contained'> 
+         MENU
+        </Button>
+        &nbsp; &nbsp; &nbsp; &nbsp; 
       </nav>
-      <Box className= 'susanimg' style = {{backgroundImage: `url("https://img.freepik.com/free-photo/blur-coffee-cafe-shop-restaurant-with-bokeh-background_1421-472.jpg?w=1060&t=st=1700515202~exp=1700515802~hmac=de4d071716fbc42616423dd6411aa9aa859c824f40691eddccdca7081fb03415")`}}></Box>
+      <Box className= 'susanimg' style = {{backgroundImage: `url("https://img.freepik.com/free-photo/blur-coffee-cafe-shop-restaurant-with-bokeh-background_1421-472.jpg?w=1060&t=st=1700515202~exp=1700515802~hmac=de4d071716fbc42616423dd6411aa9aa859c824f40691eddccdca7081fb03415")`}}>
+  
+        </Box>
+     
       <Box className= 'susanimg' style = {{backgroundImage: `url("https://img.freepik.com/premium-psd/food-menu-restaurant-web-banner-template_120329-796.jpg?w=1060")`}}>
         <Typography variant='h1'></Typography>
       </Box>
@@ -62,5 +72,4 @@ const HomePage = () => {
     </div>
   );
 };
-
 export default HomePage;
