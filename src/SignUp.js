@@ -12,7 +12,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
+import axios from 'axios';
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -26,18 +26,22 @@ function Copyright(props) {
   );
 }
 
+
 // TODO remove, this demo shouldn't need to reset the theme.
 
 const defaultTheme = createTheme();
 
 export default function SignUp() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+  const [username,setusername]=React.useState('')
+  const [email,setemail]=React.useState('')
+  const [password,setpassword]=React.useState('')
+  const handleSubmit = () => {
+    const api ="http://localhost:3001/data";
+    axios.post(api,{
+      username:username,
+      email:email,
+      password:password
+    })
   };
 
   return (
@@ -58,28 +62,20 @@ export default function SignUp() {
           <Typography component="h1" variant="h5">
             Sign up
           </Typography>
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+          <Box component="form" noValidate  sx={{ mt: 3 }}>
             <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12} sm={12}>
                 <TextField
                   autoComplete="given-name"
-                  name="firstName"
+                  name="Name"
                   required
                   fullWidth
-                  id="firstName"
-                  label="First Name"
+                  id="Name"
+                  label=" Name"
                   autoFocus
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  required
-                  fullWidth
-                  id="lastName"
-                  label="Last Name"
-                  name="lastName"
-                  autoComplete="family-name"
-                />
+                  value={username}
+                  onChange={(e)=>setusername(e.target.value)}
+                  />
               </Grid>
               <Grid item xs={12}>
                 <TextField
@@ -89,6 +85,8 @@ export default function SignUp() {
                   label="Email Address"
                   name="email"
                   autoComplete="email"
+                  value={email}
+                  onChange={(e)=>setemail(e.target.value)}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -100,6 +98,8 @@ export default function SignUp() {
                   type="password"
                   id="password"
                   autoComplete="new-password"
+                  value={password}
+                  onChange={(e)=>setpassword(e.target.value)}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -109,12 +109,13 @@ export default function SignUp() {
                 />
               </Grid>
             </Grid>
-            <Link to='/'>
+            <Link to='/login'>
             <Button
               type="submit"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
+              onClick={handleSubmit}
             >
               Sign Up
             </Button>

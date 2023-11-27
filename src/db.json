@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "username": "name",
+      "email": "sudh@123",
+      "password": "",
+      "id": 1
+    },
+    {
+      "username": "name",
+      "email": "name1",
+      "password": "name1",
+      "id": 2
+    },
+    {
+      "username": "suss",
+      "email": "suss@123",
+      "password": "12345",
+      "id": 3
+    },
+    {
+      "username": "sibi",
+      "email": "sibi@12",
+      "password": "12345",
+      "id": 4
+    },
+    {
+      "username": "srinath",
+      "email": "srinath22@gmail.com",
+      "password": "sachin",
+      "id": 5
+    }
+  ]
+}
